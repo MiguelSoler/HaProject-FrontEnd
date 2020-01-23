@@ -1,0 +1,59 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+  font-family: 'Montserrat';
+}
+.App {
+  text-align: center;
+  min-height: 100vh;
+}
+
+.App-header {
+  font-family: sans-serif;
+  background: linear-gradient(90deg,#fc5c65,#a55eea);
+  height: 12vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-main {
+  height: 88vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./HaProject-Images/martins-zemlickis-NPFu4GfFZ7E-unsplash.jpg");
+  background-size: 100%;
+}
+.App-main h2 {
+  color: rgb(0, 23, 151);
+  font-size: 3em;
+  font-weight: bold;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 15%;
+  height: 8vmin;
+  border: 1px solid burlywood;
+  border-radius: 80px;
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: bold;
+  background: linear-gradient(120deg,#3498db,#8e44ad,#3498db);
+  background-size: 200%;
+  outline: none;
+  cursor: pointer;
+  transition: .5s;
+}
+a:hover {
+  background-position: right;
+}
