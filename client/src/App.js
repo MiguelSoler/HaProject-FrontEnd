@@ -1,34 +1,45 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
-import { Provider, useSelector, useDispatch } from 'react-redux'
-import LoginModal from './home/LoginModal'
-import './App.css';
+import { Provider, useDispatch } from 'react-redux'
+import Modals from './home/Modals'
 import generateStore from './reducers'
 import Private from './private/Private'
+import './App.css';
+
 
 const Content = () => {
   const dispatch = useDispatch()
-  const user = useSelector(s => s.user)
-  const handleLogin = () => dispatch({ type: 'showModal', modalType: 'login' })
+  const handleSignin = () => dispatch({ type: 'showModal', modalType: 'signin' })
 
   return (
-    <div className="App">
-      {user && <Private />}
-      <header className="App-header">
-        <h1>RUN-RUN</h1>
+    <>
 
-      </header>
-      <main className="App-main">
-        <h2>Bienvenido/a al Gestor de Dorsales</h2>
-        <Link to="/login" onClick={handleLogin}><div className="enterbtn">ENTRA!</div></Link>
-        <Switch>
-          <Route path="/login">
-            <LoginModal />
-          </Route>
-        </Switch>
-      </main>
+      <div className="App">
 
-    </div>
+        <header className="App-header">
+          <h1 className='title'>RUN-RUN</h1>
+        </header>
+        <main className="App-main">
+          <h2 className="subtitle">Bienvenido/a al Gestor de Dorsales</h2>
+          <Link to="/login" className="entrar" onClick={handleSignin}>ENTRA!</Link>
+          <Switch>
+            <Route path="/login">
+              <Modals />
+            </Route>
+            <Route path="/register">
+              <Modals />
+            </Route>
+            <Route path="/private">
+              <Private />
+            </Route>
+          </Switch>
+          <footer>
+            <p>©2020 por Dorsales Team para Hack a Boss </p>
+          </footer>
+        </main>
+
+      </div>
+    </>
   )
 }
 
@@ -41,7 +52,7 @@ const App = () => {
         <Content />
       </Router>
     </Provider>
-  );
+  )
 }
 
 export default App;

@@ -1,10 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-
-* {
+    
+.modal-background {
     font-family: 'Montserrat';
-}
-
-.loginModal-background {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -17,47 +14,41 @@
     justify-content: center;
     transition: 1.8s;
 }
-.loginModal-foreground {
+.modal-foreground {
     border: none;
     width: 50%;
-    height: 70%;
-    background-color: rgb(255, 255, 255, 1);
+    background-color: rgb(255, 255, 255, 0.7);
     border-radius: 10px;
     font-size: calc(5px + 1vmin);
-
 }
 
-.container {
-    height: 70%;
-    width: 90%;
-    margin-top: 5em;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+@media (max-width:768px){
+    .modal-foreground {
+        min-width: 100vw;
+        min-height: 100vh;
+        border-radius: 0;
+    }
 }
 
 .signin-form {
-    height: 80%;
-    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     flex: 1 1 auto;
-    max-width: 250px;
-    border-right: 5px solid rgb(78, 39, 114);
-    padding-right: 5em;
-    font-family: 'Montserrat';
 }
-.signin-form h1 {
+.signin-form .formHeading {
     font-size: 2em;
 }
 .login-form {
     flex: 1 1 auto;
 }
+.login-form h3 {
+    text-align: center;
+    margin-top: 0%;
+}
 
 .signup-form {
-    height: 80%;
     width: 50%;
     flex: 1 1 auto;
     max-width: 250px;
@@ -67,15 +58,4 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-}
-
-.fields {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin-bottom: 1em;
-    font-size: 1em;
-}
-.inputs {
-    width: 80%;
 }

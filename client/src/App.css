@@ -1,17 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,900&display=swap');
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-
-* {
-  font-family: 'Montserrat';
-}
 .App {
   text-align: center;
   min-height: 100vh;
+  background-image: url("./HaProject-Images/martins-zemlickis-NPFu4GfFZ7E-unsplash.jpg");
+  background-size: cover;
 }
 
 .App-header {
-  font-family: sans-serif;
-  background: linear-gradient(90deg,#fc5c65,#a55eea);
+  font-family: 'Montserrat';
+  background: linear-gradient(90deg,#73AC97,#267356);
   height: 12vmin;
   display: flex;
   flex-direction: column;
@@ -27,33 +25,77 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("./HaProject-Images/martins-zemlickis-NPFu4GfFZ7E-unsplash.jpg");
-  background-size: 100%;
+  
 }
-.App-main h2 {
-  color: rgb(0, 23, 151);
-  font-size: 3em;
-  font-weight: bold;
+.App-main .subtitle {
+  font-weight: 900;
+  color:#fff;
+  text-shadow: 3px 3px #003924;
+  font-size: 4em;
 }
 
-a {
+.private {
+  text-align: center;
+  min-height: 100vh;
+  background-image: url("./HaProject-Images/steven-lelham-atSaEOeE8Nk-unsplash.jpg");
+  background-size: cover;
+}
+
+
+
+.entrar {
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
   width: 15%;
   height: 8vmin;
-  border: 1px solid burlywood;
+  border: none;
   border-radius: 80px;
   color: #fff;
-  font-size: 1.8em;
+  font-size: 2.2em;
   font-weight: bold;
-  background: linear-gradient(120deg,#3498db,#8e44ad,#3498db);
-  background-size: 200%;
+  background-color:#267356;
   outline: none;
   cursor: pointer;
   transition: .5s;
+} 
+.private .btn-race{
+  width: 20%;
+  height: 20%;
 }
-a:hover {
-  background-position: right;
+.private .entrar{
+  width: 100%;
+  font-size: 1.5em;
 }
+.entrar:hover {
+  background-color:#0E563b;
+  color:#fff;
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  text-align: right;
+  color:#fff;
+  width:97%;
+  padding-right: 3%;
+  font-size: 1.5em;;
+}
+
+@media (max-width:768px){
+  .App{
+    background-image: url("./HaProject-Images/lysander-yuen-LKaN_tqplEw-unsplash.jpg");
+  }
+  .App-main .subtitle{
+    font-size: 2em;
+  }
+  .entrar{
+    width: 50%;
+    height: 20%;
+  }
+  footer{
+    font-size: 1em;
+  }
+}
+
